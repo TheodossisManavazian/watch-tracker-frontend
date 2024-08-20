@@ -21,8 +21,8 @@ function TableLayout(props) {
                         <td> <span className="rounded-xl bg-accent-secondary px-2 py-1">{d.watch.reference_number}</span> </td>
                         <td className="px-4 py-2 text-accent-primary font-semibold">{d.watch.brand} </td>
                         <td className="px-4 py-2">{d.watch.model}</td>
-                        <td className="px-4 py-2">{currencyFormat(d.watch.pricing.market_price)}</td>
                         <td className="px-4 py-2">{currencyFormat(d.watch.pricing.retail_price)}</td>
+                        <td className="px-4 py-2">{currencyFormat(d.watch.pricing.market_price)}</td>
                         <td className="px-4 py-2">{currencyFormat(d.watch.pricing.price_change)}</td>
                         <td className="px-4 py-2">{d.watch.years_produced}</td>
                     </tr>
