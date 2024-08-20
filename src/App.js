@@ -143,11 +143,9 @@ function App() {
                   <div className='text-sm font-semibold'>{modalInfo.watch.years_produced}</div>
                 </div>
               </div>
-              
               <div className=' bg-primary rounded-2xl w-1/2 mt-6 ml-3'>
                 <WatchPricing details={modalInfo.watch.pricing}/>
               </div>
-            
             </div>
 
             <div className='flex flex-row'>
