@@ -12,9 +12,9 @@ function WatchPricing(props){
     return (
         <div className="p-3 grid gap-y-8 grid-cols-2 xl:grid-cols-4">
             {mappings.map((details) => (
-                <div key={details[0]} className="flex flex-col">
-                    <div className='text-xs text-accent-primary font-semibold text-center'>{details[0]}</div>
-                    <div className='text-xs text-center'>{details[1]}</div>
+                <div key={details[0]}>
+                    <div className='text-xs xl:text-lg text-accent-primary font-semibold text-center'>{details[0]}</div>
+                    <div className='text-xs xl:text-lg text-center'>{details[1]}</div>
                 </div>
             ))}
         </div>

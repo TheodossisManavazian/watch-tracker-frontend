@@ -89,12 +89,12 @@ function App() {
     <div className="App">
       <header className='h-32 sm:max-xl:h-36 xl:h-36 w-full p-3 sticky top-0 z-10 bg-background'>
           <div className='flex flex-row justify-center'>
-            <h1 className='text-2xl w-atuo md:max-xl:text-4xl xl:text-4xl font-semibold m-auto'>WATCH <span className='text-accent-primary'>TRACKER</span></h1>
+            <h1 className='text-xl sm:text-2xl w-atuo md:max-xl:text-4xl xl:text-4xl font-semibold m-auto'>WATCH <span className='text-accent-primary'>TRACKER</span></h1>
             <input className='w-48 md:w-64 md:max-xl:w-96 xl:w-96 pt-1 pb-1 px-3 m-auto rounded-md bg-secondary' type="text" placeholder='Search...' onChange={(e) => setQuery(e.target.value.toUpperCase())}/>
           </div>
           <div className='flex flex-row justify-center mt-1'>
-            <h1 className='text-2xl font-semibold p-2'>Showing <span className='text-accent-primary'>{watches.length}</span> Watches</h1>
-            <div className='flex flex-row justify-center ml-10 collapse xl:visible'>
+            <h1 className='text-2xl text-center font-semibold p-2'>Showing <span className='text-accent-primary'>{watches.length}</span> Watches</h1>
+            <div className='collapse w-0 xl:w-fit xl:flex xl:flex-row xl:justify-center xl:ml-10 xl:visible'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 mx-2 my-auto">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5h3m-6.75 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-15a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 4.5v15a2.25 2.25 0 0 0 2.25 2.25Z" />
               </svg>
@@ -121,7 +121,7 @@ function App() {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
-          className='bg-background p-4 m-auto my-10 w-10/12 xl:w-2/3 xl:p-10 rounded-2xl overflow-y-auto max-h-[90%]'
+          className='bg-background p-4 m-auto my-10 xl:my-24 w-10/12 xl:w-2/3 xl:p-10 rounded-2xl overflow-y-auto max-h-[90%]'
           style={{overlay: {background: "rgba(255,255,255,0.1)", zIndex:"50"}}}
           contentLabel="modal">
             <div className='flex flex-col'>
@@ -129,28 +129,28 @@ function App() {
                 <div className='bg-primary rounded-2xl w-full p-8 justify-center xl:mr-3 xl:w-1/3 xl:-order-2'>
                   <img className='m-auto justify-center max-h-64' src={require('./images/' + modalInfo.image_mapping.image_name)}/>
                 </div>
-                  <div className='bg-primary collapse rounded-2xl w-full p-3 flex justify-center align-middle xl:visible xl:w-2/3'>
+                  <div className='bg-primary collapse w-0 h-0 rounded-2xl xl:p-3 flex justify-center align-middle xl:visible xl:w-2/3 xl:h-auto'>
                     <ScatterPlot data={listings} length={listings.length}/>
                 </div>
               </div>              
               <div className='flex flex-col justify-between xl:flex-row mt-2 xl:mt-3'>
                 <div className='bg-primary rounded-2xl w-full mr-3 p-3 h-full flex flex-col'>
                   <div className='flex flex-row justify-between'>
-                    <div className='text-accent-primary font-semibold text-sm'>{modalInfo.watch.brand}</div>
-                    <div className='text-xs font-bold bg-accent-secondary rounded-2xl my-auto px-2'>{modalInfo.watch.reference_number}</div>
+                    <div className='text-accent-primary font-semibold text-sm xl:text-xl'>{modalInfo.watch.brand}</div>
+                    <div className='text-xs font-bold bg-accent-secondary rounded-2xl my-auto px-2 xl:text-lg'>{modalInfo.watch.reference_number}</div>
                   </div>
                   <div className='flex flex-row justify-between'>
-                    <div className='text-xs font-semibold'>{modalInfo.watch.model + " " + modalInfo.watch.nickname}</div>
-                    <div className='text-xs font-semibold'>{modalInfo.watch.years_produced}</div>
+                    <div className='text-xs xl:text-lg font-semibold'>{modalInfo.watch.model + " " + modalInfo.watch.nickname}</div>
+                    <div className='text-xs xl:text-lg font-semibold'>{modalInfo.watch.years_produced}</div>
                   </div>
                 </div>
-                <div className=' bg-primary collapse rounded-2xl w-full xl:visible xl:order-1'>
+                <div className=' bg-primary w-0 h-0 collapse rounded-2xl xl:w-full xl:h-auto xl:visible xl:order-1'>
                   <WatchPricing details={modalInfo.watch.pricing}/>
                 </div>
               </div>
 
               <div className='flex flex-col md:grid md:grid-cols-2 md:gap-x-2 xl:grid-cols-3 w-full xl:mt-3'>
-                <div className=' bg-primary rounded-2xl w-full mt-2 xl:mt-0 xl:collapse xl:order-1'>
+                <div className=' bg-primary rounded-2xl w-full mt-2 xl:h-0 xl:w-0 xl:mt-0 xl:collapse xl:order-1'>
                   <WatchPricing details={modalInfo.watch.pricing}/>
                 </div>
                 <div className='bg-primary rounded-2xl w-full mt-2 xl:mt-0'>
@@ -165,7 +165,7 @@ function App() {
                 </div>
               </div>
 
-              <div className='bg-primary collapse md:visible rounded-2xl w-full p-3 mt-2 flex justify-center align-middle xl:collapse'>
+              <div className='bg-primary w-0 h-0 collapse md:visible md:rounded-2xl md:w-full md:h-auto md:p-3 md:mt-2 md:flex md:justify-center md:align-middle xl:collapse xl:w-0 xl:h-0 xl:m-0 xl:p-0'>
                 <ScatterPlot data={listings} length={listings.length}/>
               </div>
           </div>

@@ -6,9 +6,9 @@ function CardLayout(props) {
     let data = props.data;
 
     return (
-        <div className="w-full flex flex-row flex-wrap justify-evenly xl:px-40">
+        <div className="w-full flex flex-row px-10 flex-wrap justify-evenly xl:px-40">
             {data.length > 0 && data.map((d) => (
-                <button key={d.watch.reference_number} className="m-auto my-2 md:max-xl:mx-2" onClick={() => props.onClick(d)}>
+                <button key={d.watch.reference_number} className="m-auto my-2 md:max-xl:mx-2 max-w-[90%] h-auto" onClick={() => props.onClick(d)}>
                     <Card
                     brand={d.watch.brand}
                     name={d.watch.name}
