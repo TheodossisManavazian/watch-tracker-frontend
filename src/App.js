@@ -16,6 +16,7 @@ Modal.setAppElement('#root');
 
 function App() {
   const WATCH_SERVICE_BASE_URL = process.env.REACT_APP__WATCH_SERVICE_BASE_URL;
+  const WATCH_SERVICE_AUTH_TOKEN = process.env.REACT_APP__WATCH_SERVICE_AUTH_TOKEN;
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [tableView, setTableView] = useState(false);
@@ -30,7 +31,15 @@ function App() {
 
   const fetchData = async (url, callbacks = []) => {
     try {
-      const dataResponse = await fetch(url);
+      const dataResponse = await fetch(url,
+        {
+          method: 'GET',
+          headers:{
+            'Authorization': `Bearer ${WATCH_SERVICE_AUTH_TOKEN}`,
+            'Content-Type': 'application/json'
+          },
+        });
+
       if (!dataResponse.ok) {
         throw new Error('Network response was not ok');
       }
