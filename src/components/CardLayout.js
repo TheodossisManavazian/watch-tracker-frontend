@@ -11,7 +11,7 @@ function CardLayout(props) {
                 <button key={d.watch.reference_number} className="m-auto my-2 md:max-xl:mx-2 max-w-[90%] h-auto" onClick={() => props.onClick(d)}>
                     <Card
                     brand={d.watch.brand}
-                    name={d.watch.name}
+                    model={d.watch.model}
                     marketPrice={currencyFormat(parseInt(d.watch.pricing.market_price))}
                     retailPrice={currencyFormat(parseInt(d.watch.pricing.retail_price))}
                     referenceNumber={d.watch.reference_number}

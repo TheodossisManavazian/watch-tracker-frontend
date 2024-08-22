@@ -14,7 +14,7 @@ function Card(props){
                 <div className="m-auto flex flex-col grow">
                     <div className="my-3 justify-center">
                         <h1 className="text-accent-primary text-2xl font-semibold">{props.brand}</h1>
-                        <h2>{props.name}</h2>
+                        <h2 className="text-xl">{props.model}</h2>
                     </div>
                     <div className="m-auto justify-center flex flex-col">
                         <h3 >{props.marketPrice}</h3>
