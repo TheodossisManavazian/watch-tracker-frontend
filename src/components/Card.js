@@ -2,7 +2,7 @@ import Tilt from "react-parallax-tilt";
 
 
 function Card(props){
-    const imagePath = require('../images/' + props.imageMapping);
+    const imagePath = '/images/' + props.imageMapping;
 
     return(
         <Tilt tiltMaxAngleX={10}

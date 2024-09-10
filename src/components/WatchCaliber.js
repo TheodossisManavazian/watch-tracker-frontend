@@ -4,7 +4,6 @@ function WatchCaliber(props){
         ['Caliber', props.details.caliber],
         ['Movement',props.details.movement],
         ['Power Reserve',props.details.power_reserve],
-        ['Number Of Jewels',props.details.qty_jewels]
     ];
 
 

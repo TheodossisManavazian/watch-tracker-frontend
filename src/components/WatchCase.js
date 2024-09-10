@@ -1,9 +1,8 @@
 function WatchCase(props){
     const mappings = [
-        ['Case Size', props.details.case_size],
+        ['Case Size', props.details.case_diameter],
         ['Case Material',props.details.case_material],
-        ['Crystal',props.details.crystal],
-        ['Water Resistance',props.details.water_resistance]
+        ['Water Resistance',props.details.case_water_resistance]
     ];
 
     return (

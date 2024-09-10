@@ -17,10 +17,16 @@ module.exports = {
       background: "#060606",
       primary: "#151515",
       secondary: "#333333",
-
-      text: "#FFFFFF",
+      text:{
+        DEFAULT: "#FFFFFF",
+        gray: "#b3b3b3",
+      },
       accent: {
-        primary: "#4bc0c0",
+        primary: {
+         DEFAULT: "#4bc0c0",
+         100: "#1a4545",
+         200: "#338787"
+        },
         secondary:"#f7424b",
       },
     },

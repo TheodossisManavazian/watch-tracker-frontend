@@ -3,7 +3,6 @@ function WatchDetails(props){
         ['Dial', props.dial],
         ['Bracelet Material', props.details.bracelet_material],
         ['Bracelet Color',props.details.bracelet_color],
-        ['Clasp Type',props.details.clasp_type],
     ];
 
     return (
