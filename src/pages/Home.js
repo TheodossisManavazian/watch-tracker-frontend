@@ -11,8 +11,8 @@ export default function Home(){
     return (
         <div className="main">
             <div className='w-full h-[800px] overflow-hidden'>
-                <video className='w-full h-full object-cover' id='mainvideo' autoPlay loop muted>
-                    <source src={'/videos/watch.mp4'}></source>
+                <video className='w-full h-full object-cover pointer-events-none' id='mainvideo' autoPlay loop muted playsInline>
+                    <source src={'/videos/watch.mp4'} type='video/mp4'></source>
                 </video>
                 <div className="absolute top-[calc(24rem*1.85)] left-0 right-0 flex justify-center items-center">
                     <Link to='/watches' className="bg-gradient-to-l from-accent-primary-100 to-accent-primary-200 text-text font-bold py-2 px-12 rounded-lg hover:from-accent-primary-200 hover:to-accent-primary">
