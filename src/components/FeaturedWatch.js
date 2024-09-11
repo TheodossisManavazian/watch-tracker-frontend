@@ -3,7 +3,7 @@ export default function FeaturedWatch(props){
     return (
         <div className="rounded-3xl p-6 bg-primary flex flex-col justify-between">
             <div className="w-3/4 m-auto h-auto">
-                <img src={require('../images' + props.watch.image_path)} alt={"Watch"+props.index} className="m-auto object-scale-down w-fit h-72 rounded-t-lg" />
+                <img src={'/images' + props.watch.image_path} alt={"Watch"+props.index} className="m-auto object-scale-down w-fit h-72 rounded-t-lg" />
             </div>
             <div>
                 <h3 className="text-2xl font-semibold mt-4">{props.watch.brand}</h3>

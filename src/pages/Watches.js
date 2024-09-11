@@ -132,7 +132,7 @@ export default function Watches() {
             <div className='flex flex-col'>
               <div className='flex'>
                 <div className='min-h-max bg-primary rounded-2xl w-full p-8 flex justify-center xl:mr-3 xl:w-1/3 xl:-order-2'>
-                    <img className='m-auto justify-center max-h-64 xl:max-h-96' src={require('../images/' + modalInfo.image_mapping.image_path)}/>
+                    <img className='m-auto justify-center max-h-64 xl:max-h-96' src={'/images/' + modalInfo.image_mapping.image_path}/>
                 </div>
                   <div className='bg-primary hidden rounded-2xl p-3 justify-center align-middle xl:flex xl:visible w-2/3 h-auto'>
                     <ScatterPlot data={listings} length={listings.length}/>
