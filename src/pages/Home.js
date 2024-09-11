@@ -26,7 +26,7 @@ export default function Home(){
                         <p className="text-lg mb-12">
                             Explore our handpicked selection of luxury watches.
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 m-auto lg:grid-cols-3 xl:grid-cols-3 gap-8">
                             <FeaturedWatch watch={featuredWatches[0]} index='1'/>
                             <FeaturedWatch watch={featuredWatches[1]} index='2'/>
                             <FeaturedWatch watch={featuredWatches[2]} index='3'/>
