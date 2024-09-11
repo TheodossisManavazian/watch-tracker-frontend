@@ -9,7 +9,7 @@ function Card(props){
             tiltMaxAngleY={10} perspective={1000} scale={1.05}>
             <div className="bg-primary rounded-2xl p-3">
                 <div className="p-6 rounded-2xl bg-background w-auto">
-                    <img className="m-auto object-scale-down h-auto w-64 max-h-[16rem]" src={imagePath} alt={props.name}/>
+                    <img className="m-auto object-scale-down h-auto w-64 max-h-[16rem]" loading='lazy' src={imagePath} alt={props.name}/>
                 </div>
                 <div className="m-auto flex flex-col grow">
                     <div className="my-3 justify-center">
