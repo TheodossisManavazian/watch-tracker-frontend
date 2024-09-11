@@ -10,11 +10,11 @@ function WatchPricing(props){
 
 
     return (
-        <div className="p-3 grid gap-y-8 grid-cols-2 xl:grid-cols-4">
-            {mappings.map((details) => (
-                <div key={details[0]}>
-                    <div className='text-xs xl:text-lg text-accent-primary font-semibold text-center'>{details[0]}</div>
-                    <div className='text-xs xl:text-lg text-center'>{details[1]}</div>
+        <div className="p-3 grid gap-y-4 grid-cols-2 xl:grid-cols-4">
+            {mappings.map((details, index) => (
+                <div key={details[0]} className={index % 2 === 1 ? 'text-right xl:text-center' : 'text-left xl:text-center'}>
+                    <div className='text-xs xl:text-lg text-accent-primary font-semibold'>{details[0]}</div>
+                    <div className='text-xs xl:text-lg'>{details[1]}</div>
                 </div>
             ))}
         </div>

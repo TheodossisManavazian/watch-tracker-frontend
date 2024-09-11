@@ -8,6 +8,7 @@ import CardLayout from '../components/CardLayout.js';
 import TableLayout from '../components/TableView.js';
 import WatchDetails from '../components/WatchDetails.js';
 import ScatterPlot from '../components/ScatterPlot.js';
+import WatchTitleInfo from '../components/WatchTitleInfo.js';
 
 Modal.setAppElement('#root');
 
@@ -138,15 +139,8 @@ export default function Watches() {
                 </div>
               </div>              
               <div className='flex flex-col justify-between xl:flex-row mt-2 xl:mt-3'>
-                <div className='bg-primary rounded-2xl w-full mr-3 p-3 h-full flex flex-col'>
-                  <div className='flex flex-row justify-between'>
-                    <div className='text-accent-primary font-semibold text-sm xl:text-xl'>{modalInfo.watch.brand}</div>
-                    <div className='text-xs font-bold bg-accent-secondary rounded-2xl my-auto px-2 xl:text-lg'>{modalInfo.watch.reference_number}</div>
-                  </div>
-                  <div className='flex flex-row justify-between'>
-                    <div className='text-xs xl:text-lg font-semibold'>{modalInfo.watch.model + " " + modalInfo.watch.nickname}</div>
-                    <div className='text-xs xl:text-lg font-semibold'>{modalInfo.watch.years_produced}</div>
-                  </div>
+                <div className='bg-primary rounded-2xl w-full mr-3'>
+                  <WatchTitleInfo watch={modalInfo.watch}/>
                 </div>
                 <div className=' bg-primary w-0 h-0 collapse rounded-2xl xl:w-full xl:h-auto xl:visible xl:order-1'>
                   <WatchPricing details={modalInfo.watch.pricing}/>
