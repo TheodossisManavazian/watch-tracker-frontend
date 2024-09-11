@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom'
 import FeaturedWatch from '../components/FeaturedWatch';
 
 const featuredWatches = [
-    {'brand': "Patek Philippe", "model": "Nautilus", "image_path": "/images/patek_philippe/5811_1G_001.png", "reference_number": "5811/1G-001", 'description': 'A timeless masterpiece of understated elegance, crafted in white gold for the discerning collector.'},
-    {'brand': "Rolex", "model": "Sky-Dweller", "image_path": "/images/rolex/336239-0002.webp", "reference_number": "336935-0001", 'description': 'A perfect fusion of innovation and luxury, crafted for the sophisticated traveler.'},
-    {'brand': "Audemars Piguet", "model": "Royal Oak Chronograph", "image_path": "/images/audemars_piguet/26715BC_ZZ_1356BC_02.png", "reference_number": "26715BC.ZZ.1356BC.02", 'description': 'An extraordinary blend of haute horlogerie and diamond-set brilliance, exuding bold luxury.'}
+    {'brand': "Patek Philippe", "model": "Nautilus", "image_path": "/patek_philippe/5811_1G_001.png", "reference_number": "5811/1G-001", 'description': 'A timeless masterpiece of understated elegance, crafted in white gold for the discerning collector.'},
+    {'brand': "Rolex", "model": "Sky-Dweller", "image_path": "/rolex/336239-0002.webp", "reference_number": "336935-0001", 'description': 'A perfect fusion of innovation and luxury, crafted for the sophisticated traveler.'},
+    {'brand': "Audemars Piguet", "model": "Royal Oak Chronograph", "image_path": "/audemars_piguet/26715BC_ZZ_1356BC_02.png", "reference_number": "26715BC.ZZ.1356BC.02", 'description': 'An extraordinary blend of haute horlogerie and diamond-set brilliance, exuding bold luxury.'}
 ]
 
 export default function Home(){
@@ -26,7 +26,7 @@ export default function Home(){
                         <p className="text-lg mb-12">
                             Explore our handpicked selection of luxury watches.
                         </p>
-                        <div className="grid grid-cols-1 m-auto lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 m-auto lg:grid-cols-3 xl:grid-cols-3 gap-8 px-10">
                             <FeaturedWatch watch={featuredWatches[0]} index='1'/>
                             <FeaturedWatch watch={featuredWatches[1]} index='2'/>
                             <FeaturedWatch watch={featuredWatches[2]} index='3'/>
