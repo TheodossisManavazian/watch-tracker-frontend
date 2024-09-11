@@ -1,6 +1,6 @@
 import { useClickAway } from "react-use";
 import { useRef } from "react";
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
@@ -28,7 +28,16 @@ export default function MobileNav() {
 
     useClickAway(ref, () => setOpen(false));
 
-
+    useEffect(() => {
+        if (isOpen) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isOpen]);
 
     return (
         <div ref={ref} className="lg:hidden xl:hidden m-auto z-[100]">

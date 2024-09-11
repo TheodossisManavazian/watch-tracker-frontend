@@ -22,8 +22,6 @@ export default function Header(){
 function NavLink({to, children, ...props}){
     const resolvedPath = useResolvedPath(to);
     const isActive = useMatch({path: resolvedPath.pathname, end: true})
-
-
     return (
         <li className={isActive ? "active": ""}>
             <Link to={to} {...props} className="hover:text-accent-secondary">{children}</Link>
